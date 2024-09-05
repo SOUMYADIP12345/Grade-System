@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade System</title>
+    <link rel="stylesheet" href="new_folder.css">
+</head>
+<body>
+    <h1>Student Grade System</h1>
+    <form id="grade-form">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="Bengali">Bengali:</label>
+        <input type="number" id="Bengali" name="Bengali"><br><br>
+        <label for="English">English:</label>
+        <input type="number" id="English" name="English"><br><br>
+        <label for="History">History:</label>
+        <input type="number" id="History" name="History"><br><br>
+        <label for="Geography">Geography:</label>
+        <input type="number" id="Geography" name="Geography"><br><br>
+        <label for="Math">Math:</label>
+        <input type="number" id="Math" name="Math"><br><br>
+        <label for="Physics">Physics:</label>
+        <input type="number" id="Physics" name="Physics"><br><br>
+        <label for="Chemistry">Chemistry:</label>
+        <input type="number" id="Chemistry" name="Chemistry"><br><br>
+        <label for="Biology">Biology:</label>
+        <input type="number" id="Biology" name="Biology"><br><br>
+        <label for="Computer">Computer:</label>
+        <input type="number" id="Computer" name="Computer"><br><br>
+        <label for="Education">Education:</label>
+        <input type="number" id="Education" name="Education"><br><br>
+        <input type="submit" value="Calculate Grade">
+    </form>
+    <div id="result"></div>
+
+    <script src="new_folder.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
